@@ -7,6 +7,7 @@ config FINGERPRINT_GOODIX
 
 config FINGERPRINT_FPC1020
 	tristate "goodix gf5216 fingerprint drvier support"
+	depends on STATE_NOTIFIER
 	help
 	  say y here to enable goodix fingerprint driver support!
 
