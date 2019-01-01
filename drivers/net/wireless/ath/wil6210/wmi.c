@@ -1426,12 +1426,21 @@ int wmi_set_ie(struct wil6210_priv *wil, u8 type, u16 ie_len, const void *ie)
 	int rc;
 	u16 len = sizeof(struct wmi_set_appie_cmd) + ie_len;
 	struct wmi_set_appie_cmd *cmd;
+<<<<<<< HEAD
 
 	if (len < ie_len) {
 		rc = -EINVAL;
 		goto out;
 	}
 
+=======
+
+	if (len < ie_len) {
+		rc = -EINVAL;
+		goto out;
+	}
+
+>>>>>>> dfca92bab267c629c7aff059de9217d2fb1ab21e
 	cmd = kzalloc(len, GFP_KERNEL);
 	if (!cmd) {
 		rc = -ENOMEM;
