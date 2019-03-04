@@ -455,8 +455,9 @@ errout:
 	return err;
 }
 
-bool ext4_valid_enc_modes(uint32_t contents_mode, uint32_t filenames_mode)
+bool ext4_valid_contents_enc_mode(uint32_t mode)
 {
+<<<<<<< HEAD
 	if (contents_mode == EXT4_ENCRYPTION_MODE_AES_256_XTS ||
 			contents_mode == EXT4_ENCRYPTION_MODE_PRIVATE) {
 		return (filenames_mode == EXT4_ENCRYPTION_MODE_AES_256_CTS ||
@@ -467,6 +468,9 @@ bool ext4_valid_enc_modes(uint32_t contents_mode, uint32_t filenames_mode)
 		return filenames_mode == EXT4_ENCRYPTION_MODE_SPECK128_256_CTS;
 
 	return false;
+=======
+	return (mode == EXT4_ENCRYPTION_MODE_AES_256_XTS);
+>>>>>>> cf84cdc1d2b5be6b3e74130a1e7156a26a813fa8
 }
 
 /**
